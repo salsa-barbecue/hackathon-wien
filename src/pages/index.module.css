@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  font-family: "Hind";
+  background-color: #121212;
+}
+
+.header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #000000;
+  padding: 3%;
+  padding-bottom: 20px;
+  min-height: 50vh;
+  position: relative;
+}
+
+.headerTitle {
+  font-family: "Expletus Sans";
+  color: white;
+  font-size: 70px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.bottomHeader {
+  position: absolute;
+  bottom: 2%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+.dataContainer {
+  padding: 10px 20%;
+  color: white;
+}
+
+h1 {
+  font-family: "Expletus Sans";
+  margin-top: 30px;
+  margin-bottom: 5px;
+  color: #84c318;
+}
+
+h2 {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+h3 {
+  font-family: "Expletus Sans";
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+p,
+ul {
+  margin-bottom: 10px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  flex: 1;
+  padding-right: 10px;
+}
+
+.dayElement {
+  border-width: 0px 0px 0px 5px;
+  border-style: solid;
+  border-color: #17BEBB;
+  padding: 5px 5px 5px 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  height: 100%;
+}
+
+.icwElement {
+  padding: 10px 10px 10px 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  height: 100%;
+}
+
+.logoPartner {
+  width: 50%;
+  margin: 20px 0px;
+}
+
+.footer {
+  margin-top: 30px;
+  height: 20px;
+  background-color: #121212;
+}
+
+input,
+textarea {
+  flex: 1;
+  padding: 10px;
+  margin: 5px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  border: 1px solid #121212;
+  font-family: "Hind";
+}
+
+input:focus,
+textarea:focus {
+  outline: none !important;
+  border: 1px solid #17BEBB;
+}
+
+button {
+  flex: 1;
+  padding: 10px;
+  margin: 5px;
+  background-color:  rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 0;
+  font-family: "Hind";
+}
+
+b {
+    color: #17BEBB;
+}
+
+@media only screen and (max-width: 768px) {
+  .headerTitle {
+    font-size: 30px;
+  }
+  .bottomHeader {
+    font-size: 10px;
+  }
+  .header {
+    min-height: 30vh;
+  }
+  .dataContainer {
+    padding: 10px 10%;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .column {
+    margin-bottom: 10px;
+  }
+  .logoPartner {
+    width: auto;
+    margin: 20px 0px;
+  }
+}
