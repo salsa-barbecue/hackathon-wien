@@ -202,7 +202,7 @@ const IndexPage = () => {
         </div>
         <h1>Have a question? Contact us!</h1>
         <div>
-          <form method="post" action="#">
+          <form method="post" action="https://getform.io/f/c4fe2b9d-7809-4c21-863a-ff56728cffff">
             <div className={indexStyles.row}>
               <input type="text" name="name" id="name" placeholder="Name" />
               <input
