@@ -139,9 +139,6 @@ b {
   .bottomHeader {
     font-size: 10px;
   }
-  .header {
-    min-height: 30vh;
-  }
   .dataContainer {
     padding: 10px 10%;
   }
