@@ -5,6 +5,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import { MdLocationPin, MdCalendarToday, MdClose } from "react-icons/md";
 import Modal from "@mui/material/Modal";
 import Seo from "../components/seo";
+import computerMan from "../images/computer-man.jpg";
 
 const IndexPage = () => {
   const [activeModal, setActiveModal] = React.useState(false);
@@ -84,32 +85,46 @@ const IndexPage = () => {
           not only on idea incubation approaches, but also on design thinking
           techniques and co-creation methodology.
         </p>
-        <h1>Who should participate?</h1>
-        <p>
-          EIT Digital Alumni from all academic areas can compete individually or
-          in teams to tackle the digital transformation challenge posed by the
-          hackathon. The participants should have a diverse background of tech,
-          business, raw materials, IT, health, climate tech, urban mobility,
-          food tech, digital manufacturing/industry 4.0 and design, which means
-          that each team should have a good mix of different skills, expertise
-          and academic backgrounds.
-          <br />
-          This event is both a single and team participation hackathon:
-          participants can either invite their friends to form a team or they
-          can participate as an individual. In the second case they would be
-          added to a specific team.
-          <br />
-          During the first day, alumni from all academic backgrounds will
-          receive a brief introduction to the predominant trends in{" "}
-          <b>digital innovation</b> as well as practical examples of business
-          innovation tools that have revolutionized the business in recent
-          years.
-          <br />
-          Once heterogeneous and multi-functional teams are created, applicants
-          will be expected to create innovative solutions using the
-          methodological approach of co-creation.
-          <br />
-        </p>
+        <div className={indexStyles.row}>
+          <div className={indexStyles.column}>
+            <h1>Who should participate?</h1>
+            <p>
+              EIT Digital Alumni from all academic areas can compete
+              individually or in teams to tackle the digital transformation
+              challenge posed by the hackathon. The participants should have a
+              diverse background of tech, business, raw materials, IT, health,
+              climate tech, urban mobility, food tech, digital
+              manufacturing/industry 4.0 and design, which means that each team
+              should have a good mix of different skills, expertise and academic
+              backgrounds.
+              <br />
+              This event is both a single and team participation hackathon:
+              participants can either invite their friends to form a team or
+              they can participate as an individual. In the second case they
+              would be added to a specific team.
+              <br />
+              During the first day, alumni from all academic backgrounds will
+              receive a brief introduction to the predominant trends in{" "}
+              <b>digital innovation</b> as well as practical examples of
+              business innovation tools that have revolutionized the business in
+              recent years.
+              <br />
+              Once heterogeneous and multi-functional teams are created,
+              applicants will be expected to create innovative solutions using
+              the methodological approach of co-creation.
+              <br />
+            </p>
+          </div>
+          <div
+            className={indexStyles.column}
+            style={{
+              backgroundImage: `url(${computerMan})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          ></div>
+        </div>
+
         <h1>Timeline:</h1>
         <div className={indexStyles.row}>
           <div className={indexStyles.column}>
