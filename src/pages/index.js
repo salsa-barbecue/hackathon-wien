@@ -2,11 +2,16 @@ import * as React from "react";
 import * as indexStyles from "./index.module.css";
 
 import { StaticImage } from "gatsby-plugin-image";
-import { MdLocationPin, MdCalendarToday } from "react-icons/md";
+import { MdLocationPin, MdCalendarToday, MdClose } from "react-icons/md";
+import Modal from "@mui/material/Modal";
+import Seo from "../components/seo";
 
 const IndexPage = () => {
+  const [activeModal, setActiveModal] = React.useState(false);
+
   return (
     <main className={indexStyles.main}>
+      <Seo />
       <div className={indexStyles.header}>
         <h1 className={indexStyles.headerTitle}>
           EIT DIGITAL ALUMNI HACKATHON
@@ -14,6 +19,14 @@ const IndexPage = () => {
           WIEN, AUSTRIA
         </h1>
         <div className={indexStyles.bottomHeader}>
+          <button
+            className={indexStyles.headerButton}
+            onClick={() => {
+              setActiveModal(true);
+            }}
+          >
+            Join the hackathon
+          </button>
           <h2>
             <MdLocationPin style={{ color: "#84C318" }} /> Talent Garden Wien,{" "}
             <br />
@@ -30,7 +43,7 @@ const IndexPage = () => {
         <StaticImage
           src={"../images/eit-digital-eu.png"}
           alt="Eit digital"
-          style={{ margin: "20px 0px" }}
+          style={{ margin: "20px 0px", width: "35%" }}
         />
         <h1>Description</h1>
         <p>
@@ -134,7 +147,13 @@ const IndexPage = () => {
           </div>
           <div className={indexStyles.column}>
             <h1>How to join?</h1>
-            <p>(EXTERNAL LINK - FORM)</p>
+            <button
+              onClick={() => {
+                setActiveModal(true);
+              }}
+            >
+              Click here!
+            </button>
           </div>
         </div>
         <h1>In collaboration with</h1>
@@ -156,14 +175,13 @@ const IndexPage = () => {
                 over 300 top European corporations, SMEs, start-ups,
                 universities and research institutes. As a Knowledge and
                 Innovation Community of the European Institute of Innovation and
-                Technology, <b>EIT Digital</b>{" "}
-                is focused on entrepreneurship and is at the forefront of
-                integrating education, research and business by bringing
-                together students, researchers, engineers, business developers
-                and entrepreneurs. This is done in our pan-European network of
-                Co-Location Centres in Berlin, Budapest, Eindhoven, Helsinki,
-                London, Madrid, Paris, Stockholm and Trento. We also have a hub
-                in Silicon Valley.
+                Technology, <b>EIT Digital</b> is focused on entrepreneurship
+                and is at the forefront of integrating education, research and
+                business by bringing together students, researchers, engineers,
+                business developers and entrepreneurs. This is done in our
+                pan-European network of Co-Location Centres in Berlin, Budapest,
+                Eindhoven, Helsinki, London, Madrid, Paris, Stockholm and
+                Trento. We also have a hub in Silicon Valley.
               </p>
             </div>
           </div>
@@ -200,41 +218,59 @@ const IndexPage = () => {
             </div>
           </div>
         </div>
-        <h1>Have a question? Contact us!</h1>
-        <div>
-          <form method="post" action="https://getform.io/f/c4fe2b9d-7809-4c21-863a-ff56728cffff">
-            <div className={indexStyles.row}>
-              <input type="text" name="name" id="name" placeholder="Name" />
-              <input
-                type="text"
-                name="surname"
-                id="surname"
-                placeholder="Surname"
-              />
-              <input type="email" name="email" id="email" placeholder="Email" />
-              <input
-                type="text"
-                name="company"
-                id="company"
-                placeholder="Company/alumni"
-              />
-            </div>
-            <div className={indexStyles.row}>
-              <textarea
-                name="message"
-                id="message"
-                rows="5"
-                placeholder="Message"
-              />
-            </div>
-            <div className={indexStyles.row}>
-              <button type="submit">Send</button>
-              <input type="reset" value="Clear" />
-            </div>
-          </form>
+        <div
+          className={indexStyles.contattaci}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            marginTop: "60px",
+          }}
+        >
+          <h1 style={{ margin: 0, marginRight: "20px" }}>Have a question?</h1>
+          <button
+            onClick={() => {
+              setActiveModal(true);
+            }}
+          >
+            Contact us!
+          </button>
         </div>
       </div>
-
+      <Modal
+        onClose={() => {
+          console.log("triggered");
+          setActiveModal(false);
+        }}
+        open={activeModal}
+      >
+        <div
+          className={indexStyles.modal}
+          onClick={() => {
+            setActiveModal(false);
+          }}
+        >
+          <div className={indexStyles.innerModal}>
+            <div className={indexStyles.headerModal}>
+              <MdClose
+                style={{ color: "#84C318", fontSize: "30px" }}
+                onClick={() => {
+                  setActiveModal(false);
+                }}
+              />
+            </div>
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSdzkUB_Kd_Cqq9vsksUTKLV6IN_zra5-EIBxc0y-fJK5jnwUQ/viewform?embedded=true"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+              className={indexStyles.iframe}
+            >
+              Loading...
+            </iframe>
+          </div>
+        </div>
+      </Modal>
       <div className={indexStyles.footer}></div>
     </main>
   );
@@ -242,4 +278,4 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head = () => <title>Home Page</title>;
+export const Head = () => <title>Hackathon Wien</title>;

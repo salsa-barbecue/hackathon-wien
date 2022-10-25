@@ -5,7 +5,7 @@
 
 .main {
   font-family: "Hind";
-  background-color: #121212;
+  background-color: white;
 }
 
 .header {
@@ -13,7 +13,7 @@
     url("../images/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #000000;
+  background-color: whitesmoke;
   padding: 3%;
   padding-bottom: 20px;
   min-height: 50vh;
@@ -40,7 +40,7 @@
 
 .dataContainer {
   padding: 10px 20%;
-  color: white;
+  color: black;
 }
 
 h1 {
@@ -80,13 +80,13 @@ ul {
   border-style: solid;
   border-color: #17BEBB;
   padding: 5px 5px 5px 10px;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(0, 0, 0, 0.05);
   height: 100%;
 }
 
 .icwElement {
   padding: 10px 10px 10px 10px;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(0, 0, 0, 0.05);
   height: 100%;
 }
 
@@ -98,17 +98,19 @@ ul {
 .footer {
   margin-top: 30px;
   height: 20px;
-  background-color: #121212;
+  background-color: white;
+
 }
 
+/*
 input,
 textarea {
   flex: 1;
   padding: 10px;
   margin: 5px;
-  background-color: rgba(255, 255, 255, 0.05);
-  color: white;
-  border: 1px solid #121212;
+  background-color: rgba(0, 0, 0, 0.05);
+  color: black;
+  border: 1px solid white;
   font-family: "Hind";
 }
 
@@ -122,14 +124,58 @@ button {
   flex: 1;
   padding: 10px;
   margin: 5px;
-  background-color:  rgba(255, 255, 255, 0.15);
+  background-color:  rgba(0, 0, 0, 0.15);
   color: white;
   border: 0;
   font-family: "Hind";
 }
+*/
+
+button {
+  padding: 5px 10px;
+  background-color:  #84c318;
+  color: white;
+  border: 0;
+  font-family: "Hind";
+  font-size: 20px;
+  transition-duration: 100ms;
+  font-weight: bold;
+}
+
+button:hover {
+  cursor:pointer;
+  transform: translateY(-2px);
+}
+
+.headerButton{
+  color: #84c318;
+  background-color: white;
+  margin-bottom: 20px;
+}
 
 b {
     color: #17BEBB;
+}
+
+.modal {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.innerModal {
+  height: 90vh;
+  width: 40vw;
+  display: flex;
+  align-items: stretch;
+  padding:10px;
+  background-color: white;
+}
+
+.iframe {
+  flex: 1
 }
 
 @media only screen and (max-width: 768px) {
@@ -151,5 +197,19 @@ b {
   .logoPartner {
     width: auto;
     margin: 20px 0px;
+  }
+  .innerModal {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .contattaci {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 769px ) and (max-width: 1230px) {
+  .headerTitle {
+    font-size: 50px;
   }
 }
