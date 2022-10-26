@@ -9,6 +9,7 @@ import computerMan from "../images/computer-man.jpg";
 
 const IndexPage = () => {
   const [activeModal, setActiveModal] = React.useState(false);
+  const [activeModalJoin, setActiveModalJoin] = React.useState(false);
 
   return (
     <main className={indexStyles.main}>
@@ -23,7 +24,7 @@ const IndexPage = () => {
           <button
             className={indexStyles.headerButton}
             onClick={() => {
-              setActiveModal(true);
+              setActiveModalJoin(true);
             }}
           >
             Join the hackathon
@@ -164,7 +165,7 @@ const IndexPage = () => {
             <h1>How to join?</h1>
             <button
               onClick={() => {
-                setActiveModal(true);
+                setActiveModalJoin(true);
               }}
             >
               Click here!
@@ -275,7 +276,41 @@ const IndexPage = () => {
               />
             </div>
             <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSdzkUB_Kd_Cqq9vsksUTKLV6IN_zra5-EIBxc0y-fJK5jnwUQ/viewform?embedded=true"
+              src="https://docs.google.com/forms/d/e/1FAIpQLSdaKmjNs0Pm8lN4Grm7sV_XYdeBbCQqVz4t2SMUtGRm23P5cA/viewform?embedded=true"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+              className={indexStyles.iframe}
+            >
+              Loading...
+            </iframe>
+          </div>
+        </div>
+      </Modal>
+      <Modal
+        onClose={() => {
+          console.log("triggered");
+          setActiveModalJoin(false);
+        }}
+        open={activeModalJoin}
+      >
+        <div
+          className={indexStyles.modal}
+          onClick={() => {
+            setActiveModalJoin(false);
+          }}
+        >
+          <div className={indexStyles.innerModal}>
+            <div className={indexStyles.headerModal}>
+              <MdClose
+                style={{ color: "#84C318", fontSize: "30px" }}
+                onClick={() => {
+                  setActiveModalJoin(false);
+                }}
+              />
+            </div>
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLScAVZeZ9qnJhlOqU86nj6_TH2tE1XgCk5LmtN3cD8ESZfYIQQ/viewform?embedded=true"
               frameborder="0"
               marginheight="0"
               marginwidth="0"
