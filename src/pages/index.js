@@ -16,9 +16,9 @@ const IndexPage = () => {
       <Seo />
       <div className={indexStyles.header}>
         <h1 className={indexStyles.headerTitle}>
-          EIT DIGITAL ALUMNI HACKATHON
+          EIT Digital Alumni DeepHack
           <br />
-          WIEN, AUSTRIA
+          Wien, Austria
         </h1>
         <div className={indexStyles.bottomHeader}>
           <button
