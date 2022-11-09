@@ -6,6 +6,9 @@ import { MdLocationPin, MdCalendarToday, MdClose } from "react-icons/md";
 import Modal from "@mui/material/Modal";
 import Seo from "../components/seo";
 import computerMan from "../images/computer-man.jpg";
+import altosx from "../images/altosx.png";
+import altodx from "../images/altodx.png";
+import bassocn from "../images/bassocn.jpg";
 
 const IndexPage = () => {
   const [activeModal, setActiveModal] = React.useState(false);
@@ -16,7 +19,7 @@ const IndexPage = () => {
       <Seo />
       <div className={indexStyles.header}>
         <h1 className={indexStyles.headerTitle}>
-          EIT Digital Alumni DeepHack
+          EIT Alumni DeepHack
           <br />
           Wien, Austria
         </h1>
@@ -42,18 +45,47 @@ const IndexPage = () => {
       </div>
       <div className={indexStyles.dataContainer}>
         <h1>Proposal player</h1>
-        <StaticImage
-          src={"../images/eit-digital-eu.png"}
-          alt="Eit digital"
-          style={{ margin: "20px 0px", width: "35%" }}
-        />
+        <div className={indexStyles.row} style={{marginTop: 20, marginBottom: 20}}>
+          <div
+            className={indexStyles.column}
+            style={{
+              backgroundImage: `url(${altosx})`,
+              minHeight: 200,
+              backgroundSize: "contain",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          ></div>
+          <div
+            className={indexStyles.column}
+            style={{
+              backgroundImage: `url(${altodx})`,
+              minHeight: 200,
+              backgroundSize: "contain",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          ></div>
+        </div>
+        <div className={indexStyles.row} style={{marginTop: 40}}>
+          <div
+            className={indexStyles.column}
+            style={{
+              backgroundImage: `url(${bassocn})`,
+              minHeight: 200,
+              backgroundSize: "contain",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          ></div>
+        </div>
+
         <h1>Description</h1>
         <p>
-          <b>EIT DIGITAL Alumni</b>, coming from different backgrounds and
-          courses of study, will be divided into teams that will compete in a
-          challenge focused on the issues of the digital transformation, and
-          specifically on how it is affecting the future ways of work and talent
-          development.
+          <b>EIT Alumni</b>, coming from different backgrounds and courses of
+          study, will be divided into teams that will compete in a challenge
+          focused on the issues of the digital transformation, and specifically
+          on how it is affecting the future ways of work and talent development.
           <br />
           The methodological approach foreseen is that of <b>co-creation</b>,
           the practice of collaborating with other stakeholders to guide the
@@ -86,18 +118,29 @@ const IndexPage = () => {
           not only on idea incubation approaches, but also on design thinking
           techniques and co-creation methodology.
         </p>
+        <h1>EIT Alumni</h1>
+        <p style={{ marginBottom: 40 }}>
+          The EIT Alumni community brings together an interdisciplinary and
+          multicultural community of change agents who share a common vision for
+          tackling societal challenges and creating positive impact through
+          innovation and entrepreneurship. The EIT Alumni Community consists of
+          members of the Alumni Communities of the EIT's Knowledge Innovation
+          Communities (KICs), stemming both from their Education, Business
+          creation and Innovation programmes. With a strong and organised
+          community, its strengths lay in network effects, and in the strong
+          societal impact that EIT Alumni Community members can have.
+        </p>
         <div className={indexStyles.row}>
           <div className={indexStyles.column}>
             <h1>Who should participate?</h1>
             <p>
-              EIT Digital Alumni from all academic areas can compete
-              individually or in teams to tackle the digital transformation
-              challenge posed by the hackathon. The participants should have a
-              diverse background of tech, business, raw materials, IT, health,
-              climate tech, urban mobility, food tech, digital
-              manufacturing/industry 4.0 and design, which means that each team
-              should have a good mix of different skills, expertise and academic
-              backgrounds.
+              EIT Alumni from all academic areas can compete individually or in
+              teams to tackle the digital transformation challenge posed by the
+              hackathon. The participants should have a diverse background of
+              tech, business, raw materials, IT, health, climate tech, urban
+              mobility, food tech, digital manufacturing/industry 4.0 and
+              design, which means that each team should have a good mix of
+              different skills, expertise and academic backgrounds.
               <br />
               This event is both a single and team participation hackathon:
               participants can either invite their friends to form a team or
@@ -125,7 +168,61 @@ const IndexPage = () => {
             }}
           ></div>
         </div>
-
+        <h1>Innovation Communities</h1>
+        <p>
+          The EIT’s Knowledge and Innovation Communities are partnerships that
+          bring together businesses, research centres and universities. They
+          allow:
+        </p>
+        <ul>
+          <li>
+            innovative products and services to be developed in every area
+            imaginable, including climate change, healthy living and active
+            ageing
+          </li>
+          <li>new companies to be started</li>
+          <li>a new generation of entrepreneurs to be trained</li>
+        </ul>
+        <p>
+          There are currently nine Innovation Communities and each focuses on a
+          different societal challenge:
+        </p>
+        <ul>
+          <li>
+            <b>EIT Climate-KIC</b>: Working to accelerate the transition to a
+            zero-carbon economy
+          </li>
+          <li>
+            <b>EIT Digital</b>: Driving Europe’s digital transformation
+          </li>
+          <li>
+            <b>EIT Food</b>: Leading a global revolution in food innovation and
+            production
+          </li>
+          <li>
+            <b>EIT Health</b>: Giving EU citizens greater opportunities to enjoy
+            a healthy life
+          </li>
+          <li>
+            <b>EIT InnoEnergy</b>: Achieving a sustainable energy future for
+            Europe
+          </li>
+          <li>
+            <b>EIT Manufacturing</b>: Strengthening and increasing the
+            competitiveness of Europe’s manufacturing industry
+          </li>
+          <li>
+            <b>EIT Raw Materials</b>: Developing raw materials into a major
+            strength for Europe
+          </li>
+          <li>
+            <b>EIT Urban Mobility</b>: Smart, green and integrated transport
+          </li>
+          <li>
+            <b>EIT Culture & Creativity</b>: Transforming Europe’s Cultural &
+            Creative Sectors and Industries
+          </li>
+        </ul>
         <h1>Timeline:</h1>
         <div className={indexStyles.row}>
           <div className={indexStyles.column}>
