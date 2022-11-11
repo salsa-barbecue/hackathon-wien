@@ -38,7 +38,7 @@ const IndexPage = () => {
             Liechtensteinstraße 111/115, 1090 Wien, Austria
           </h2>
           <h2>
-            <MdCalendarToday style={{ color: "#84C318" }} /> 12th - 13th
+            <MdCalendarToday style={{ color: "#84C318" }} /> 26th - 27th
             November 2022
           </h2>
         </div>
@@ -227,7 +227,7 @@ const IndexPage = () => {
         <div className={indexStyles.row}>
           <div className={indexStyles.column}>
             <div className={indexStyles.dayElement}>
-              <h3>Saturday 12th</h3>
+              <h3>Saturday 26th</h3>
               <p>
                 The first day will open with an introductory speech which will
                 provide participants with a contextual view of the challenge and
@@ -242,7 +242,7 @@ const IndexPage = () => {
           </div>
           <div className={indexStyles.column}>
             <div className={indexStyles.dayElement}>
-              <h3>Sunday 13th</h3>
+              <h3>Sunday 27th</h3>
               <p>
                 The second day will be dedicated to the development of the
                 project and, by the late afternoon, to pitching it in front of
