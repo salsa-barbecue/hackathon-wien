@@ -33,7 +33,7 @@ const IndexPage = () => {
             Join the hackathon
           </button>
           <h2>
-            <MdLocationPin style={{ color: "#84C318" }} /> Talent Garden Wien,{" "}
+            <MdLocationPin style={{ color: "#84C318" }} /> Hybrid Talent Garden Wien & Online,{" "}
             <br />
             Liechtensteinstraße 111/115, 1090 Wien, Austria
           </h2>
